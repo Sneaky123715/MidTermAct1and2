@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* CSS Variables for Blue/Cool Theme */
         :root {
             --primary-blue: #0a1929;
             --secondary-blue: #1e3a8a;
@@ -23,7 +22,6 @@
             --shadow-dark: rgba(10, 25, 41, 0.5);
         }
 
-        /* Keyframe Animations */
         @keyframes slideDown {
             from {
                 opacity: 0;
@@ -83,7 +81,6 @@
             background: var(--dark-navy);
         }
 
-        /* Full-Screen Container */
         .catalog-container {
             min-height: 100vh;
             width: 100vw;
@@ -91,7 +88,6 @@
             background: var(--gradient-primary);
         }
 
-        /* Animated Background */
         .catalog-container::before {
             content: '';
             position: fixed;
@@ -107,7 +103,6 @@
             z-index: -1;
         }
 
-        /* Header Section */
         .catalog-header {
             background: var(--gradient-secondary);
             padding: 40px 20px;
@@ -162,14 +157,12 @@
             letter-spacing: 2px;
         }
 
-        /* Content Container */
         .content-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 60px 20px;
         }
 
-        /* Task Sections */
         .task-section {
             margin: 60px 0;
             animation: slideUp 1s ease-out;
@@ -204,7 +197,6 @@
             text-align: center;
         }
 
-        /* Product Display Cards */
         .data-card {
             background: rgba(30, 58, 138, 0.2);
             border: 2px solid var(--accent-blue);
@@ -292,7 +284,6 @@
             left: 100%;
         }
 
-        /* Featured Product Section */
         .featured-module {
             background: rgba(15, 23, 42, 0.8);
             border: 2px solid var(--cyan-accent);
@@ -679,16 +670,13 @@ echo '</div>';
 ?>
 
     <script>
-        // Enhanced interactive effects
         document.addEventListener('DOMContentLoaded', function() {
-            // Staggered animation for catalog units
             const units = document.querySelectorAll('.catalog-unit');
             units.forEach((unit, index) => {
                 unit.style.animationDelay = `${index * 0.2}s`;
                 unit.style.animation = 'slideUp 0.8s ease-out forwards';
             });
 
-            // Hover effect for spec items
             const specItems = document.querySelectorAll('.spec-item');
             specItems.forEach(item => {
                 item.addEventListener('mouseenter', function() {
@@ -700,7 +688,6 @@ echo '</div>';
                 });
             });
 
-            // Dynamic price module effects
             const priceModules = document.querySelectorAll('.price-module');
             priceModules.forEach(module => {
                 module.addEventListener('click', function() {
