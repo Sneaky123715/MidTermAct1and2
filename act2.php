@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* CSS Variables for Blue/Cool Theme */
         :root {
             --primary-blue: #0a1929;
             --secondary-blue: #1e3a8a;
@@ -26,7 +25,6 @@
             --error-red: #ef4444;
         }
 
-        /* Keyframe Animations */
         @keyframes slideDown {
             from {
                 opacity: 0;
@@ -70,7 +68,6 @@
             50% { opacity: 0.7; }
         }
 
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -86,7 +83,6 @@
             background: var(--dark-navy);
         }
 
-        /* Full-Screen Container */
         .dashboard-container {
             min-height: 100vh;
             width: 100vw;
@@ -94,7 +90,6 @@
             background: var(--gradient-primary);
         }
 
-        /* Animated Background */
         .dashboard-container::before {
             content: '';
             position: fixed;
@@ -111,7 +106,6 @@
             z-index: -1;
         }
 
-        /* Header Section */
         .dashboard-header {
             background: var(--gradient-secondary);
             padding: 40px 20px;
@@ -166,14 +160,12 @@
             letter-spacing: 2px;
         }
 
-        /* Content Container */
         .content-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 60px 20px;
         }
 
-        /* Task Sections */
         .task-section {
             margin: 60px 0;
             animation: slideUp 1s ease-out;
@@ -208,7 +200,6 @@
             text-align: center;
         }
 
-        /* Dashboard Cards */
         .control-panel {
             background: rgba(30, 58, 138, 0.2);
             border: 2px solid var(--accent-blue);
@@ -289,7 +280,6 @@
             transform: scale(1.05);
         }
 
-        /* Access Control Section */
         .access-module {
             background: rgba(15, 23, 42, 0.8);
             border: 2px solid var(--steel-blue);
@@ -394,7 +384,6 @@
             color: #e2e8f0;
         }
 
-        /* Notification System */
         .notification-system {
             background: rgba(30, 58, 138, 0.3);
             border: 2px solid var(--accent-blue);
@@ -508,7 +497,6 @@
             color: #fbbf24;
         }
 
-        /* System Footer */
         .system-footer {
             background: var(--gradient-secondary);
             text-align: center;
@@ -526,7 +514,6 @@
             letter-spacing: 2px;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -738,16 +725,13 @@ echo '</div>';
 ?>
 
     <script>
-        // Enhanced interactive effects
         document.addEventListener('DOMContentLoaded', function() {
-            // Staggered animation for permission items
             const permissions = document.querySelectorAll('.permission-item');
             permissions.forEach((item, index) => {
                 item.style.animationDelay = `${index * 0.1}s`;
                 item.style.animation = 'slideLeft 0.6s ease-out forwards';
             });
 
-            // Interactive badges
             const badges = document.querySelectorAll('.status-badge, .premium-badge');
             badges.forEach(badge => {
                 badge.addEventListener('click', function() {
@@ -758,7 +742,6 @@ echo '</div>';
                 });
             });
 
-            // Notification system interaction
             const notificationDisplay = document.querySelector('.notification-display');
             if (notificationDisplay) {
                 notificationDisplay.addEventListener('mouseenter', function() {
